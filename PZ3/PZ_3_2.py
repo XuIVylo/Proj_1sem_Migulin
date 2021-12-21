@@ -14,7 +14,7 @@ while True:  # обработка исключений
 
 if a > 0:   # Проверка чисел
     i += 1
-elif a < 0:
+elif a < 0:z
     k += 1
 else:
     pass
