@@ -8,10 +8,10 @@ with open('hotline1.txt', 'r') as file:
     text = file.read()
     add = re.subn(r'«Горячая линия»', '«Горячая линия Министерства образования Ростовской области»', text)
     text = add[0]
-with open('hotline1_new.txt', 'w') as out:
-    out.write(text)
+with open('hotline1_new.txt', 'w') as new:
+    new.write(text)
 
-p = re.compile(r'[8][(]\d{3}[)]\d{3}-\d{2}-\d{2}')
+shab = re.compile(r'[8][(]\d{3}[)]\d{3}-\d{2}-\d{2}')
 
-print('Номера телефонов соответствующих шаблону: ', p.findall(text))
-print('Количество полученных элементов: ', len(p.findall(text)))
+print('Номера телефонов соответствующих шаблону: ', shab.findall(text))
+print('Количество полученных номеров: ', len(shab.findall(text)))
